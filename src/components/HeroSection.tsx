@@ -10,7 +10,7 @@ const HeroSection: React.FC = () => {
         <div className="flex space-x-4">
           <button className="bg-[#E5BC49] text-white font-bold px-8 py-4 rounded-full">INQUIRE NOW</button>
           <button className="flex items-center space-x-2">
-            <span className="bg-white text-[#0d2a5a] font-bold px-8 py-4 rounded-full border-4 border-[#0d2a5a]">WATCH DEMO</span>
+            <span className="bg-white text-[#0d2a5a] font-bold px-8 py-4 rounded-full border-3 border-[#0d2a5a]">WATCH DEMO</span>
           </button>
         </div>
       </div>
