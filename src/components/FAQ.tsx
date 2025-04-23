@@ -12,15 +12,15 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isFirst }) => {
   return (
     <div className={`${isFirst ? '' : 'border-t'} border-gray-200`}>
       <div 
-        className={`w-full hover:bg-[#0d2a5a] hover:text-white ${isOpen ? 'bg-[#0d2a5a] text-white' : 'text-primary'} transition-colors duration-200`}
+        className={`w-full hover:bg-[#8773e3] ${isOpen ? 'bg-[#f6f6f6]' : ''} transition-colors duration-200`}
       >
         <button 
-          className="flex w-full justify-between items-center text-left font-medium text-lg py-6 px-4 focus:outline-none"
+          className="flex w-full justify-between items-center text-left font-medium text-lg py-6 px-4 focus:outline-none hover:text-white transition-colors duration-200"
           onClick={() => setIsOpen(!isOpen)}
         >
           {question}
           <svg 
-            className={`w-5 h-5 transform ${isOpen ? 'rotate-180' : ''} transition-transform duration-200`}
+            className={`w-5 h-5 transform ${isOpen ? 'rotate-180' : ''} transition-transform duration-200 group-hover:text-white`}
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24" 
@@ -64,19 +64,17 @@ const FAQ: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 px-16 bg-white">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-medium mb-12 text-center text-primary">Frequently Asked Questions</h2>
-        <div className="border-b border-gray-200">
-          {faqItems.map((item, index) => (
-            <FAQItem 
-              key={index}
-              question={item.question}
-              answer={item.answer}
-              isFirst={index === 0}
-            />
-          ))}
-        </div>
+    <section className="py-16 px-8 md:px-20 bg-white max-w-[1600px] mx-auto">
+      <h2 className="text-4xl md:text-5xl font-medium mb-12 text-center">Frequently Asked Questions</h2>
+      <div className="max-w-3xl border-b border-gray-200 mx-auto">
+        {faqItems.map((item, index) => (
+          <FAQItem 
+            key={index}
+            question={item.question}
+            answer={item.answer}
+            isFirst={index === 0}
+          />
+        ))}
       </div>
     </section>
   );

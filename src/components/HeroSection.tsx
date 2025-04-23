@@ -4,47 +4,71 @@ import { TypeAnimation } from 'react-type-animation';
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between px-16 py-40">
-      <div className="max-w-2xl">
-        <div className="h-[180px] relative flex flex-col justify-center overflow-hidden">
-          <h1 className="text-7xl font-medium text-primary">
-            <TypeAnimation
-              sequence={[
-                'Your church,\npowered by AI',
-                2000,
-                'Connect your\ncongregation',
-                2000,
-                'Empower your\nministry',
-                2000,
-                'Grow your\ncommunity',
-                2000,
-              ]}
-              wrapper="div"
-              speed={50}
-              repeat={Infinity}
-              cursor={true}
-              className="leading-[1.1]"
-              style={{ 
-                display: 'block', 
-                whiteSpace: 'pre-line', 
-                height: '100%',
-                position: 'absolute',
-                top: '0',
-                left: '0'
-              }}
-            />
-          </h1>
-        </div>
-        <p className="text-lg mb-6 text-gray-700">The first AI-powered digital ministry team designed to listen, engage, and surface insights about congregants, seekers, and visitors — while speaking the spiritual language of your church.</p>
-        <div className="flex space-x-4">
-          <button className="bg-[#E5BC49] text-white font-bold px-8 py-4 rounded-full">INQUIRE NOW</button>
-          <button className="flex items-center space-x-2">
-            <span className="bg-white text-[#0d2a5a] font-bold px-8 py-4 rounded-full border-3 border-[#0d2a5a]">WATCH DEMO</span>
-          </button>
+    <section className="pt-10 pb-0">
+      <div className="px-8 md:px-20 max-w-[1600px] mx-auto">
+        <div className="flex flex-col xl:flex-row items-start justify-between xl:gap-24">
+          {/* Left side - Main headline */}
+          <div className="max-w-3xl md:max-w-5xl mb-12 xl:mb-0">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium text-black leading-tight">
+              <span className="block sm:inline">AI for your church.<br /></span>{' '}
+              <span className="block sm:inline mt-1 sm:mt-0">
+                Let's{' '}
+                <span className="text-[#8773e8] inline-block">
+                  <TypeAnimation
+                    sequence={[
+                      'improve',
+                      3000,
+                      'enhance',
+                      3000,
+                      'transform',
+                      3000,
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    repeat={Infinity}
+                  />
+                </span>
+                experiences.
+              </span>
+            </h1>
+          </div>
+
+          {/* Right side - Description and CTA */}
+          <div className="max-w-sm">
+            <p className="text-lg text-gray-700 mb-6">
+              Innovative technology allows you to connect and empower your congregation through the spiritual language of your church.
+            </p>
+            <a href="#technology" className="inline-flex items-center font-medium text-[#0d2a5a] group">
+              EXPLORE TECHNOLOGY
+              <svg 
+                className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24" 
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
-      <div className="flex-shrink-0 mt-8 md:mt-0">
-        <Image src="/placeholder.jpeg" alt="Placeholder Image" width={800} height={400} />
+
+      {/* Full width image - spans the entire viewport width */}
+      <div className="mt-12 w-screen relative left-1/2 right-1/2 -mx-[50vw]">
+        <div className="w-full aspect-[21/9] relative">
+          <Image 
+            src="/hero-pic.jpg" 
+            alt="Spirit Led AI Technology" 
+            fill 
+            priority
+            sizes="100vw"
+            style={{ 
+              objectFit: 'cover',
+              objectPosition: 'center'
+            }} 
+          />
+        </div>
       </div>
     </section>
   );
