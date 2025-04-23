@@ -61,7 +61,7 @@ const TeamSection: React.FC = () => {
     {
       name: "Amanuel Zeryihun",
       role: "Founder",
-      bio: "Passionate about combining technology and faith to create meaningful connections and empower communities.",
+      bio: "Experienced developer and entrepreneur with a passion for innovation that enhances people's lives.",
       imageSrc: "/team-member1.jpg",
       socialLinks: {
         linkedin: "https://linkedin.com",
@@ -71,8 +71,8 @@ const TeamSection: React.FC = () => {
     {
       name: "Adam Ryu",
       role: "Co-Founder",
-      bio: "Technology enthusiast with a background in AI and a heart for helping faith organizations thrive in the digital age.",
-      imageSrc: "/team-member2.jpg",
+      bio: "Computer science student with a passion for building tools that help improve people's lives.",
+      imageSrc: "/team-member2.png",
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/adamryu/",
         github: "https://github.com/adavidryu"
@@ -85,7 +85,7 @@ const TeamSection: React.FC = () => {
       <div className="px-8 md:px-20 max-w-[1600px] mx-auto">
         <h2 className="text-4xl md:text-5xl font-medium mb-6 text-center">Our Team</h2>
         <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto text-center">
-          Meet the passionate individuals behind Faith Stack AI, dedicated to helping faith communities thrive in the digital age.
+          We're the faces behind Faith Stack AI. Looking forward to partnering with you!
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 max-w-5xl mx-auto">
