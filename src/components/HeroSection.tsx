@@ -39,11 +39,11 @@ const HeroSection: React.FC = () => {
               Innovative technology allows you to connect and empower your congregation through the spiritual language of your church.
             </p>
             <a href="#technology" className="inline-flex items-center font-medium text-[#8773e3] group">
-              EXPLORE TECHNOLOGY
+              EXPLORE CAPABILITIES
               <svg 
                 className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" 
                 fill="none" 
-                stroke="currentColor" 
+                stroke="currentColor"
                 viewBox="0 0 24 24" 
                 xmlns="http://www.w3.org/2000/svg"
               >

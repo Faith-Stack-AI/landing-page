@@ -6,6 +6,7 @@ import HeroSection from '../components/HeroSection';
 import MissionSection from '../components/MissionSection';
 import TechnologySection from '../components/TechnologySection';
 import TeamSection from '../components/TeamSection';
+import ContactSection from '../components/ContactSection';
 import FAQ from '../components/FAQ';
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <TechnologySection />
         <TeamSection />
         <FAQ />
+        <ContactSection />
       </main>
       <footer className="py-8 bg-gray-50">
         <div className="max-w-[1600px] mx-auto px-8 md:px-20">

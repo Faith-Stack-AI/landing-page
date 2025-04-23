@@ -16,15 +16,15 @@ const NavBar: React.FC = () => {
       <div className="hidden lg:flex items-center justify-center ml-auto mr-4">
         <div className="border-2 border-gray-300 rounded-full px-8 py-1.5">
           <ul className="flex font-medium text-sm">
-            <li className="px-4"><a href="#mission" className="hover:text-[#0d2a5a]">OUR MISSION</a></li>
-            <li className="px-4"><a href="#technology" className="hover:text-[#0d2a5a]">TECHNOLOGY</a></li>
-            <li className="px-4"><a href="#" className="hover:text-[#0d2a5a]">ABOUT TEAM</a></li>
+            <li className="px-4"><a href="#mission" className="hover:text-[#0d2a5a]">MISSION</a></li>
+            <li className="px-4"><a href="#technology" className="hover:text-[#0d2a5a]">CAPABILITIES</a></li>
+            <li className="px-4"><a href="#" className="hover:text-[#0d2a5a]">TEAM</a></li>
           </ul>
         </div>
       </div>
       
       <div className="flex items-center space-x-4">
-        <button className="bg-[#8773e8] text-white font-bold text-sm px-6 py-2 rounded-full">CONTACT US</button>
+        <a href="#contact" className="bg-[#8773e3] text-white font-bold text-sm px-6 py-2 rounded-full hover:bg-[#7361d3] transition-colors">CONTACT US</a>
         
         {/* Mobile menu button */}
         <button 
@@ -51,9 +51,10 @@ const NavBar: React.FC = () => {
       {mobileMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-white shadow-lg z-50 lg:hidden">
           <ul className="flex flex-col py-2">
-            <li><a href="#mission" className="block px-6 py-2 hover:bg-gray-100">OUR MISSION</a></li>
-            <li><a href="#technology" className="block px-6 py-2 hover:bg-gray-100">OUR TECHNOLOGY</a></li>
-            <li><a href="#" className="block px-6 py-2 hover:bg-gray-100">ABOUT TEAM</a></li>
+            <li><a href="#mission" className="block px-6 py-2 hover:bg-gray-100">MISSION</a></li>
+            <li><a href="#technology" className="block px-6 py-2 hover:bg-gray-100">CAPABILITIES</a></li>
+            <li><a href="#" className="block px-6 py-2 hover:bg-gray-100">TEAM</a></li>
+            <li><a href="#contact" className="block px-6 py-2 hover:bg-gray-100">CONTACT US</a></li>
           </ul>
         </div>
       )}
