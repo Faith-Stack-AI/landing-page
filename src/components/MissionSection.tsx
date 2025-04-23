@@ -4,7 +4,7 @@ import Image from 'next/image';
 const MissionSection: React.FC = () => {
   return (
     <section id="mission" className="px-8 md:px-20 py-20 max-w-[1600px] mx-auto">
-      <h2 className="text-4xl md:text-5xl font-medium mb-16">Our mission</h2>
+      <h2 className="text-4xl md:text-5xl font-medium mb-16 text-center">Our mission</h2>
       
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-24">
         {/* Left side - Diagram */}
@@ -45,7 +45,7 @@ const MissionSection: React.FC = () => {
             </div>
           </div>
           
-          <a href="#" className="inline-block text-[#0d2a5a] font-medium hover:underline mt-2">
+          <a href="#" className="inline-block text-[#8773e3] font-medium hover:underline mt-2">
             Learn more
           </a>
         </div>
