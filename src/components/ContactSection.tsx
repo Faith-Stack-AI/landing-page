@@ -1,5 +1,5 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, SubmitHandler } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -10,10 +10,10 @@ type FormValues = {
   message: string;
 };
 
-const schema = yup.object().shape({
+const schema = yup.object({
   name: yup.string().required('Please enter your name'),
   email: yup.string().email('Please enter a valid email').required('Please enter your email'),
-  churchName: yup.string(),
+  churchName: yup.string().optional(),
   message: yup.string().required('Please enter your message'),
 });
 
@@ -24,12 +24,12 @@ const ContactSection: React.FC = () => {
     reset,
     formState: { errors, isSubmitting, isSubmitSuccessful }
   } = useForm<FormValues>({
-    resolver: yupResolver(schema)
+    resolver: yupResolver(schema) as any
   });
 
   const [showSuccess, setShowSuccess] = React.useState(false);
 
-  const onSubmit = async (data: FormValues) => {
+  const onSubmit: SubmitHandler<FormValues> = async (data) => {
     try {
       // In a real application, you would send the form data to your server
       console.log('Form submitted:', data);
