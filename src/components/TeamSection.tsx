@@ -81,10 +81,10 @@ const TeamSection: React.FC = () => {
   ];
 
   return (
-    <section id="team" className="py-20 bg-gray-50">
+    <section id="team" className="py-20 bg-[#8773e3]">
       <div className="px-8 md:px-20 max-w-[1600px] mx-auto">
-        <h2 className="text-4xl md:text-5xl font-medium mb-6 text-center">Our Team</h2>
-        <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto text-center">
+        <h2 className="text-4xl md:text-5xl font-semibold mb-6 text-center text-white">Our Team</h2>
+        <p className="text-xl text-white mb-12 max-w-3xl mx-auto text-center">
           We're the faces behind Faith Stack AI. Looking forward to partnering with you!
         </p>
         

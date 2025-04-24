@@ -4,7 +4,7 @@ import Image from "next/image";
 import NavBar from '../components/NavBar';
 import HeroSection from '../components/HeroSection';
 import MissionSection from '../components/MissionSection';
-import TechnologySection from '../components/TechnologySection';
+// import TechnologySection from '../components/TechnologySection';
 import TeamSection from '../components/TeamSection';
 import ContactSection from '../components/ContactSection';
 import FAQ from '../components/FAQ';
@@ -18,7 +18,7 @@ export default function Home() {
       <main className="flex-grow">
         <HeroSection />
         <MissionSection />
-        <TechnologySection />
+        {/* <TechnologySection /> */}
         <TeamSection />
         <FAQ />
         <ContactSection />

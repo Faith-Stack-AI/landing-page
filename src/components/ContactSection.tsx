@@ -48,7 +48,7 @@ const ContactSection: React.FC = () => {
   return (
     <section id="contact" className="py-20 bg-[#f7f7fa]">
       <div className="px-8 md:px-20 max-w-[1600px] mx-auto">
-        <h2 className="text-4xl md:text-5xl font-medium mb-6 text-center">Get in Touch</h2>
+        <h2 className="text-4xl md:text-5xl font-semibold mb-6 text-center">Get in Touch</h2>
         <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto text-center">
           Ready to discuss how we can help your church thrive in the digital age? Reach out to our team and let's start a conversation.
         </p>
@@ -159,4 +159,4 @@ const ContactSection: React.FC = () => {
   );
 };
 
-export default ContactSection; 
+export default ContactSection;

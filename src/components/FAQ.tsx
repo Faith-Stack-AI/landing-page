@@ -64,8 +64,8 @@ const FAQ: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 px-8 md:px-20 bg-white max-w-[1600px] mx-auto">
-      <h2 className="text-4xl md:text-5xl font-medium mb-12 text-center">Frequently Asked Questions</h2>
+    <section id="faq" className="py-16 px-8 md:px-20 bg-[white] max-w-[1600px] mx-auto">
+      <h2 className="text-4xl md:text-5xl font-semibold mb-12 text-center">Frequently Asked Questions</h2>
       <div className="max-w-3xl border-b border-gray-200 mx-auto">
         {faqItems.map((item, index) => (
           <FAQItem 
