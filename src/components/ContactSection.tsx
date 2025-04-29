@@ -46,10 +46,10 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#f7f7fa]">
+    <section id="contact" className="py-20 bg-[#8773e3]">
       <div className="px-8 md:px-20 max-w-[1600px] mx-auto">
-        <h2 className="text-4xl md:text-5xl font-semibold mb-6 text-center">Get in Touch</h2>
-        <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto text-center">
+        <h2 className="text-4xl md:text-5xl font-semibold mb-6 text-center text-white">Get in Touch</h2>
+        <p className="text-lg text-white mb-12 max-w-3xl mx-auto text-center">
           Ready to discuss how we can help your church thrive in the digital age? Reach out to our team and let's start a conversation.
         </p>
 
@@ -61,7 +61,7 @@ const ContactSection: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-medium mb-4">Thank you for reaching out!</h3>
+              <h3 className="text-2xl font-medium mb-4 text-gray-900">Thank you for reaching out!</h3>
               <p className="text-gray-600 mb-8">
                 We've received your message and will get back to you shortly.
               </p>
@@ -82,7 +82,7 @@ const ContactSection: React.FC = () => {
                   <input
                     id="name"
                     type="text"
-                    {...register('name')}
+                    {...register('name', { required: 'Name is required' })}
                     className={`w-full px-4 py-3 border ${
                       errors.name ? 'border-red-500' : 'border-gray-300'
                     } rounded-lg focus:ring-2 focus:ring-[#8773e3] focus:border-transparent outline-none transition-colors`}
@@ -92,6 +92,7 @@ const ContactSection: React.FC = () => {
                     <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>
                   )}
                 </div>
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                     Email <span className="text-red-500">*</span>
@@ -99,11 +100,17 @@ const ContactSection: React.FC = () => {
                   <input
                     id="email"
                     type="email"
-                    {...register('email')}
+                    {...register('email', { 
+                      required: 'Email is required',
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: 'Invalid email address'
+                      }
+                    })}
                     className={`w-full px-4 py-3 border ${
                       errors.email ? 'border-red-500' : 'border-gray-300'
                     } rounded-lg focus:ring-2 focus:ring-[#8773e3] focus:border-transparent outline-none transition-colors`}
-                    placeholder="your.email@example.com"
+                    placeholder="Your email"
                   />
                   {errors.email && (
                     <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>

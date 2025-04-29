@@ -7,34 +7,29 @@ interface FAQItemProps {
 }
 
 const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isFirst }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  
+  const [isOpen, setIsOpen] = useState(isFirst);
+
   return (
-    <div className={`${isFirst ? '' : 'border-t'} border-gray-200`}>
-      <div 
-        className={`w-full hover:bg-[#8773e3] ${isOpen ? 'bg-[#f6f6f6]' : ''} transition-colors duration-200`}
+    <div className={`py-6 ${!isFirst ? 'border-t border-gray-200' : ''}`}>
+      <button
+        className="flex justify-between items-center w-full text-left"
+        onClick={() => setIsOpen(!isOpen)}
       >
-        <button 
-          className="flex w-full justify-between items-center text-left font-medium text-lg py-6 px-4 focus:outline-none hover:text-white transition-colors duration-200"
-          onClick={() => setIsOpen(!isOpen)}
+        <h3 className="text-xl font-medium">{question}</h3>
+        <svg
+          className={`w-6 h-6 transform transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
         >
-          {question}
-          <svg 
-            className={`w-5 h-5 transform ${isOpen ? 'rotate-180' : ''} transition-transform duration-200 group-hover:text-white`}
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24" 
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-      </div>
-      <div 
-        className={`bg-white text-gray-700 transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-96 opacity-100 py-6 px-4' : 'max-h-0 opacity-0'}`}
-      >
-        <p>{answer}</p>
-      </div>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      {isOpen && (
+        <div className="mt-4 text-gray-600">
+          {answer}
+        </div>
+      )}
     </div>
   );
 };
@@ -42,24 +37,20 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, isFirst }) => {
 const FAQ: React.FC = () => {
   const faqItems = [
     {
-      question: "What is Spirit Led AI?",
-      answer: "Spirit Led AI is the first AI-powered digital ministry team designed to listen, engage, and surface insights about congregants, seekers, and visitors — while speaking the spiritual language of your church."
+      question: "What is Faith Stack AI?",
+      answer: "Faith Stack AI is a technology company focused on empowering faith communities through innovative solutions. We're building the future of digital ministry with a unique approach that combines cutting-edge technology with deep understanding of faith-based organizations."
     },
     {
-      question: "How does it help my church?",
-      answer: "Our AI solution helps your church community by providing 24/7 engagement, answering questions about faith and your church specifics, and gathering insights that help you better serve your congregation."
+      question: "What makes Faith Stack AI different?",
+      answer: "We bring together a unique combination of technical expertise and deep understanding of faith communities. Our approach is centered around creating meaningful connections and empowering organizations to focus on their core mission while we handle the technical complexities."
     },
     {
-      question: "Is it difficult to implement?",
-      answer: "Not at all! Our team helps you get set up quickly and easily, with minimal technical knowledge required. We provide full support throughout the implementation process."
+      question: "How do you work with faith communities?",
+      answer: "We partner with forward-thinking faith organizations to understand their unique needs and challenges. Our collaborative approach ensures that our solutions are tailored to each community's specific context and goals."
     },
     {
-      question: "Can it be customized to our church's specific beliefs?",
-      answer: "Absolutely! Spirit Led AI is designed to be fully customizable to reflect your church's specific theology, language, and spiritual approach."
-    },
-    {
-      question: "What about privacy and data security?",
-      answer: "We take privacy and security very seriously. All data is encrypted and stored securely, and we comply with all relevant data protection regulations."
+      question: "What's your vision for the future?",
+      answer: "We envision a future where technology seamlessly enhances the work of faith communities, enabling them to focus on what matters most - building meaningful connections and serving their communities. We're committed to being at the forefront of this transformation."
     }
   ];
 

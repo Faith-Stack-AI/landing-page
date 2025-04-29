@@ -17,7 +17,7 @@ const NavBar: React.FC = () => {
         <div className="border-2 border-black rounded-full px-8 py-1.5">
           <ul className="flex font-medium text-sm">
             <li className="px-4"><a href="#mission" className="hover:text-[#8773e3]">MISSION</a></li>
-            <li className="px-4"><a href="#team" className="hover:text-[#8773e3]">TEAM</a></li>
+            {/* <li className="px-4"><a href="#team" className="hover:text-[#8773e3]">TEAM</a></li> */}
             <li className="px-4"><a href="#faq" className="hover:text-[#8773e3]">FAQ</a></li>
           </ul>
         </div>
@@ -52,7 +52,7 @@ const NavBar: React.FC = () => {
         <div className="absolute top-full left-0 right-0 bg-white shadow-lg z-50 lg:hidden">
           <ul className="flex flex-col py-2">
             <li><a href="#mission" className="block px-6 py-2 hover:bg-gray-100">MISSION</a></li>
-            <li><a href="#team" className="block px-6 py-2 hover:bg-gray-100">TEAM</a></li>
+            {/* <li><a href="#team" className="block px-6 py-2 hover:bg-gray-100">TEAM</a></li> */}
             <li><a href="#faq" className="block px-6 py-2 hover:bg-gray-100">FAQ</a></li>
             <li><a href="#contact" className="block px-6 py-2 hover:bg-gray-100">CONTACT US</a></li>
           </ul>
