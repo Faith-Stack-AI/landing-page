@@ -85,7 +85,7 @@ const TeamSection: React.FC = () => {
       <div className="px-8 md:px-20 max-w-[1600px] mx-auto">
         <h2 className="text-4xl md:text-5xl font-semibold mb-6 text-center text-white">Our Team</h2>
         <p className="text-xl text-white mb-12 max-w-3xl mx-auto text-center">
-          We're the faces behind Faith Stack AI. Looking forward to partnering with you!
+          We&apos;re the faces behind Faith Stack AI. Looking forward to partnering with you!
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 max-w-5xl mx-auto">

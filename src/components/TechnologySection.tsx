@@ -62,9 +62,9 @@ const TechnologySection: React.FC = () => {
         </div>
         
         <div className="bg-white p-8 md:p-12 rounded-3xl shadow-md text-center max-w-3xl mx-auto">
-          <h3 className="text-2xl md:text-3xl font-medium mb-6 text-gray-900">Let's Explore Possibilities Together</h3>
+          <h3 className="text-2xl md:text-3xl font-medium mb-6 text-gray-900">Let&apos;s Explore Possibilities Together</h3>
           <p className="text-gray-700 mb-8 md:px-8">
-            We're passionate about partnering with forward-thinking faith communities to develop solutions 
+            We&apos;re passionate about partnering with forward-thinking faith communities to develop solutions 
             that address your specific challenges and amplify your mission.
           </p>
           <a 

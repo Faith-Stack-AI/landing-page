@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -50,7 +50,7 @@ const ContactSection: React.FC = () => {
       <div className="px-8 md:px-20 max-w-[1600px] mx-auto">
         <h2 className="text-4xl md:text-5xl font-semibold mb-6 text-center text-white">Get in Touch</h2>
         <p className="text-lg text-white mb-12 max-w-3xl mx-auto text-center">
-          Ready to discuss how we can help your church thrive in the digital age? Reach out to our team and let's start a conversation.
+          Ready to discuss how we can help your church thrive in the digital age? Reach out to our team and let&apos;s start a conversation.
         </p>
 
         <div className="max-w-3xl mx-auto bg-white rounded-3xl shadow-md p-8 md:p-12">
@@ -63,7 +63,7 @@ const ContactSection: React.FC = () => {
               </div>
               <h3 className="text-2xl font-medium mb-4 text-gray-900">Thank you for reaching out!</h3>
               <p className="text-gray-600 mb-8">
-                We've received your message and will get back to you shortly.
+                We&apos;ve received your message and will get back to you shortly.
               </p>
               <button
                 onClick={() => setShowSuccess(false)}
