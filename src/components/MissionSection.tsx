@@ -4,7 +4,7 @@ import Image from 'next/image';
 const MissionSection: React.FC = () => {
   return (
     <div className="w-full bg-gray-50">
-      <section id="mission" className="px-8 md:px-20 py-20 max-w-[1600px] mx-auto">
+      <section id="mission" className="px-8 md:px-20 py-20 max-w-[1600px] mx-auto scroll-mt-24">
         <h2 className="text-4xl md:text-5xl font-semibold mb-16 text-center">Our mission</h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-24">

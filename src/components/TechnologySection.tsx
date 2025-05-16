@@ -69,7 +69,7 @@ const TechnologySection: React.FC = () => {
           </p>
           <a 
             href="#contact" 
-            className="inline-block bg-[#8773e3] text-white font-bold text-sm px-8 py-3 rounded-full hover:bg-[#6b5ab3] transition-colors"
+            className="inline-block bg-[#FBAF00] text-white font-bold text-sm px-8 py-3 rounded-full hover:bg-[#E09E00] transition-colors"
           >
             START A CONVERSATION
           </a>

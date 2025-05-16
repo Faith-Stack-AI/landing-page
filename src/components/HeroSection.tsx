@@ -12,7 +12,7 @@ const HeroSection: React.FC = () => {
               <span className="block sm:inline">AI for your church.</span>{' '}<br />
               <span className="block sm:inline mt-1 sm:mt-0">
                 Let's{' '}
-                <span className="text-[#8773e3] inline-block">
+                <span className="text-[#FBAF00] inline-block">
                   <TypeAnimation
                     sequence={[
                       'improve',

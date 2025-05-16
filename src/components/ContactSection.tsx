@@ -153,7 +153,7 @@ const ContactSection: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3 bg-[#8773e3] text-white font-bold text-sm rounded-lg hover:bg-[#7361d3] transition-colors disabled:opacity-70"
+                  className="w-full py-3 bg-[#FBAF00] text-white font-bold text-sm rounded-lg hover:bg-[#E09E00] transition-colors disabled:opacity-70"
                 >
                   {isSubmitting ? 'Sending...' : 'SEND MESSAGE'}
                 </button>
