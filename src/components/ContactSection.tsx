@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -22,9 +22,9 @@ const ContactSection: React.FC = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isSubmitting, isSubmitSuccessful }
+    formState: { errors, isSubmitting }
   } = useForm<FormValues>({
-    resolver: yupResolver(schema) as any
+    resolver: yupResolver(schema) as unknown as any
   });
 
   const [showSuccess, setShowSuccess] = React.useState(false);

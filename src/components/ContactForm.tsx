@@ -23,7 +23,7 @@ const ContactForm: React.FC = () => {
     <div className="bg-white rounded-3xl shadow-md p-8 md:p-10" id="contact">
       <h2 className="text-3xl md:text-4xl font-medium mb-6 text-center">Contact Us</h2>
       <p className="text-gray-700 mb-8 text-center max-w-2xl mx-auto">
-        Ready to explore how we can enhance your church's digital presence? Fill out the form below, and we'll be in touch soon.
+        Ready to explore how we can enhance your church&apos;s digital presence? Fill out the form below, and we&apos;ll be in touch soon.
       </p>
 
       {isSubmitted ? (
@@ -32,7 +32,7 @@ const ContactForm: React.FC = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           <h3 className="text-lg font-medium text-green-800 mb-2">Thank you for reaching out!</h3>
-          <p className="text-green-700">Your message has been sent successfully. We'll get back to you as soon as possible.</p>
+          <p className="text-green-700">Your message has been sent successfully. We&apos;ll get back to you as soon as possible.</p>
           <button
             onClick={() => setIsSubmitted(false)}
             className="mt-6 px-6 py-2 bg-white border border-green-500 text-green-600 rounded-full hover:bg-green-50 transition-colors font-medium text-sm"

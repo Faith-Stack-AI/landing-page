@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium text-black leading-tight">
               <span className="block sm:inline">AI for your church.</span>{' '}<br />
               <span className="block sm:inline mt-1 sm:mt-0">
-                Let's{' '}
+                Let&apos;s{' '}
                 <span className="text-[#FBAF00] inline-block">
                   <TypeAnimation
                     sequence={[
