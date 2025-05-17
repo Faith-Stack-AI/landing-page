@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import type { Resolver } from 'react-hook-form';
 
 type FormValues = {
   name: string;
@@ -24,7 +25,7 @@ const ContactSection: React.FC = () => {
     reset,
     formState: { errors, isSubmitting }
   } = useForm<FormValues>({
-    resolver: yupResolver(schema) as unknown as any
+    resolver: yupResolver(schema) as Resolver<FormValues>
   });
 
   const [showSuccess, setShowSuccess] = React.useState(false);
